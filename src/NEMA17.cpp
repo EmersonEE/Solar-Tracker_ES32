@@ -13,7 +13,7 @@ NEMA17::NEMA17(uint8_t _pinENA, uint8_t _pinDIR, uint8_t _pinSTEP)
 
 void NEMA17::moveRight()
 {
-    digitalWrite(pinDIR, HIGH);
+    digitalWrite(pinDIR, LOW);
     digitalWrite(pinSTEP, HIGH);
     delay(5);
     digitalWrite(pinSTEP, LOW);
@@ -22,7 +22,7 @@ void NEMA17::moveRight()
 
 void NEMA17::moveUp()
 {
-    digitalWrite(pinDIR, HIGH);
+    digitalWrite(pinDIR, LOW);
     digitalWrite(pinSTEP, HIGH);
     delay(5);
     digitalWrite(pinSTEP, LOW);
@@ -31,7 +31,7 @@ void NEMA17::moveUp()
 
 void NEMA17::moveLeft()
 {
-    digitalWrite(pinDIR, LOW);
+    digitalWrite(pinDIR, HIGH);
     digitalWrite(pinSTEP, HIGH);
     delay(5);
     digitalWrite(pinSTEP, LOW);
@@ -40,7 +40,7 @@ void NEMA17::moveLeft()
 
 void NEMA17::moveDown()
 {
-    digitalWrite(pinDIR, LOW);
+    digitalWrite(pinDIR, HIGH);
     digitalWrite(pinSTEP, HIGH);
     delay(5);
     digitalWrite(pinSTEP, LOW);

@@ -41,7 +41,23 @@ float LDR::readVoltage()
     return vref * readRaw() / 4095.0;
 }
 
+float LDR::readVoltage2(uint8_t selLDR)
+{
+    return vref * analogRead(selLDR) / 4095.0;
+}
+
 void LDR::setVref(float newVref)
 {
     vref = newVref;
 }
+
+float LDR::getLDRAverage(uint8_t ldrNum, uint8_t ldrNum2)
+{
+    float value1 = readVoltage2(ldrNum);
+    float value2 = readVoltage2(ldrNum2);
+    return (value1 + value2) / 2;
+}
+// float getLDRAverageUp();
+// float getLDRAverageDown();
+// float getLDRAverageLeft();
+// float getLDRAverageRight();
