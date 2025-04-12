@@ -1,5 +1,6 @@
-#ifndef LED_H
-#define LED_H
+#ifndef __LED_H__
+#define __LED_H__
+
 #include <Arduino.h>
 class LED
 {
@@ -9,9 +10,10 @@ public:
     void ledConf();
     void ledLDR();
     void ledsOff();
+
 private:
     uint8_t pinLED1;
     uint8_t pinLED2;
 };
 
-#endif
+#endif // __LED_H__

@@ -1,5 +1,6 @@
-#ifndef JOYSTICK_H
-#define JOYSTICK_H
+#ifndef __JOYSTICK_H__
+#define __JOYSTICK_H__
+
 
 #include <Arduino.h>
 
@@ -32,4 +33,4 @@ private:
     int lastSWState = HIGH;                 // Último estado registrado del botón
 };
 
-#endif
+#endif // __JOYSTICK_H__

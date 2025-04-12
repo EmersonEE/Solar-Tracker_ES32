@@ -1,21 +1,6 @@
-// #ifndef LDR_H
-// #define LDR_H
-// #include <Arduino.h>
-// class LDR
-// {
-// public:
-//     LDR(uint8_t _pinLDR);
-//     void init();
-//     uint8_t readLDR();
-//     float readVoltage();
-// private:
-//     uint8_t pinLDR;
-// };
+#ifndef __LDR_H__
+#define __LDR_H__
 
-// #endif
-// ldr.h
-#ifndef LDR_H
-#define LDR_H
 #include <Arduino.h>
 
 class LDR
@@ -35,4 +20,5 @@ private:
     uint8_t pinLDR;
     float vref;
 };
-#endif
+
+#endif // __LDR_H__

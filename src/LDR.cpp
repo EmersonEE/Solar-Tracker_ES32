@@ -1,22 +1,3 @@
-// #include "LDR.h"
-
-// LDR::LDR(uint8_t _pinLDR)
-// {
-//     pinLDR = _pinLDR;
-//     pinMode(pinLDR, INPUT);
-// }
-
-// uint8_t LDR::readLDR()
-// {
-//     return map(analogRead(pinLDR), 0, 4095, 0, 255);
-// }
-
-// float LDR::readVoltage()
-// {
-//     return (3.30) * analogRead(pinLDR) / 4095.0;
-// }
-
-// ldr.cpp
 #include "LDR.h"
 
 LDR::LDR(uint8_t pin, float vref) : pinLDR(pin), vref(vref)
