@@ -43,29 +43,29 @@ float DataReceiver::getLDRVoltage(uint8_t ldrNum)
 
 float DataReceiver::getLDRAverageUp()
 {
-    float sum = ldrs[0]->readVoltage() + ldrs[2]->readVoltage();
+    float sum = ldrs[0]->readVoltage() + ldrs[1]->readVoltage();
     return sum / 2.0f;
 }
 
 float DataReceiver::getLDRAverageDown()
 {
-    float sum = ldrs[1]->readVoltage() + ldrs[3]->readVoltage();
+    float sum = ldrs[2]->readVoltage() + ldrs[3]->readVoltage();
     return sum / 2.0f;
 }
 
 float DataReceiver::getLDRAverageLeft()
 {
-    float sum = ldrs[0]->readVoltage() + ldrs[1]->readVoltage();
+    float sum = ldrs[1]->readVoltage() + ldrs[3]->readVoltage();
     return sum / 2.0f;
 }
 
 float DataReceiver::getLDRAverageRight()
 {
-    float sum = ldrs[2]->readVoltage() + ldrs[3]->readVoltage();
+    float sum = ldrs[2]->readVoltage() + ldrs[0]->readVoltage();
     return sum / 2.0f;
 }
 
-// #define LDR1_PIN 34 // Superior Izquierda 0
-// #define LDR2_PIN 35 // Inferior Izquierda 1
-// #define LDR3_PIN 32 // Superior Derecha 2
-// #define LDR4_PIN 33 // Inferior Derecha 3
+// float promedioSI = ldr1.readVoltage();  // Superior Derecha; 0
+// float promedioSD = ldr2.readVoltage();  // Superior Izquierda 1
+// float promedioID = ldr3.readVoltage(); // Inferior Derecha 2
+// float promedioII = ldr4.readVoltage();    // Inferior IZquierda 3

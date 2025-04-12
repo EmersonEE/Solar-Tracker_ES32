@@ -1,6 +1,5 @@
-// datareceiver.h
-#ifndef ESP_TRAINNER_H
-#define ESP_TRAINNER_H
+#ifndef __DATARECEIVER_H__
+#define __DATARECEIVER_H__
 
 #include <Arduino.h>
 #include "LDR.h"
@@ -17,9 +16,10 @@ public:
     float getLDRAverageLeft();
     float getLDRAverageRight();
     float getLDRAverageCenter();
-    
+
 private:
     LDR *ldrs[4];          // Array de punteros a LDRs
     uint16_t rawValues[4]; // Almacena lecturas actuales
 };
-#endif
+
+#endif // __DATARECEIVER_H__
